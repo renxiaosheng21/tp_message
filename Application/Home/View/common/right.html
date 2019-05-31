@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center">
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <td align="center" valign="middle" width="600">留言内容</td>
+            <td align="center" valign="middle" width="200">留言时间</td>
+            <td align="center" valign="middle" width="100">留言者</td>
+            <volist name="list" id="item" offset="0" length='1'>
+                <eq name="Think.session.user.userId" value="$item.user_id">
+                    <td align="center" valign="middle" width="100">
+                        操作
+                    </td>
+                </eq>
+            </volist>
+
+        </tr>
+        </thead>
+
+        <volist name="list" id="item">
+            <tbody>
+            <tr>
+                <td align="center" valign="middle" width="600">{$item.content}</td>
+                <td align="center" valign="middle" width="200">{$item.created_at|date='Y-m-d H:i:s',###}</td>
+                <td align="center" valign="middle" width="100">{$item.username}</td>
+
+                <eq name="Think.session.user.userId" value="$item.user_id">
+                    <td align="center" valign="middle" width="100">
+                        <a href="{:U('edit?id='.$item['message_id'])}">
+                            编辑
+                        </a>
+                        <a href="{:U('delete?id='.$item['message_id'])}" onclick="return confirm('确定删除此条留言？')">
+                            删除
+                        </a>
+                    </td>
+                </eq>
+
+            </tr>
+
+            </tbody>
+
+        </volist>
+
+    </table>
+    <div class="result page">{$page}</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+[ 2019-05-31T09:16:09+08:00 ] ::1 /self_demo/tp_message/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001644s ]
+SQL: SHOW COLUMNS FROM `message` [ RunTime:0.0263s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM message message  JOIN user user ON User.user_id=Message.user_id LIMIT 1   [ RunTime:0.0127s ]
+SQL: SELECT message.message_id AS message_id,message.content AS content,message.created_at AS created_at,user.user_id AS user_id,user.username AS username FROM message message  JOIN user user ON User.user_id=Message.user_id ORDER BY message.message_id desc LIMIT 0,2   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001923s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001988s ]
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 146 行.
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001733s ]
+
+[ 2019-05-31T09:16:14+08:00 ] ::1 /self_demo/tp_message/index.php/Home/Index/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `message` [ RunTime:0.0141s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0122s ]
+SQL: SELECT COUNT(*) AS tp_count FROM message message  JOIN user user ON User.user_id=Message.user_id LIMIT 1   [ RunTime:0.0054s ]
+SQL: SELECT message.message_id AS message_id,message.content AS content,message.created_at AS created_at,user.user_id AS user_id,user.username AS username FROM message message  JOIN user user ON User.user_id=Message.user_id ORDER BY message.message_id desc LIMIT 2,2   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 146 行.
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+NOTIC: [8] Undefined index: user D:\wamp64\www\self_demo\tp_message\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
